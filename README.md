@@ -1,13 +1,6 @@
-[Overview]
-- Web based "Posture and Eyecare" Application
+# Web based "Posture and Eyecare" Application
+Healthcare web application for PC/laptop users.
 
-[Get the Code]
-- git clone http://[USER_ID]@sourceforge.lge.com:8080/minsoo907.kim/Posture_Eyecare
+It tracks user facial position and eye blink.
 
-[Simple Code Commit Step]
-- git checkout -b [NEW_BRANCH_NAME]
-- git add .
-- git commit -a
-- git checkout master
-- git merge [NEW_BRANCH_NAME]
-- git push origin master
+Through its algorithm and calculation, it encourages the user to adjust their working posture and frequently blink to prevent slouching and dry eye syndrome.
