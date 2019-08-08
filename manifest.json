@@ -1,0 +1,43 @@
+{
+  "name": "LG Posture & Eye Care",
+  "description": "Posture Eyecare for Your Body",
+  "manifest_version": 3,
+  "offline_enabled": true,
+  "minimum_chrome_version": "35.0.1916.114",
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXaBUTn1PNjYo8fg+1JBmWBA3bdrn7siqzkY0tYeuNHIWi5ji+6V5Y3QWYRFQh3AFwrZaBItvaM3fsit7K++kDoD67VhYGrGd+mjl4Htmp+/HbzzCQMBJdTdTOvR722+VHmIttzbe/I7GB3a74KvPYfUENONj1tswyKkuXeMgFOQIDAQAB",
+  "oauth2": {
+    "client_id": "696763237280-bkfouv0030la6l9t2g1elim04no836fq.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive"
+    ]
+  },
+  "version": "0.11",
+  "app": {
+  	"background":{
+  	   "scripts":["chrome_data/js/default.js"]
+  	}
+  },
+  "icons": {
+    "16": "images/icon_main.png",
+    "64": "images/icon_main.png",
+    "128": "images/icon_main.png"
+  },
+  "file_handlers": {
+    "text": {
+      "types": [
+          "text/*"
+      ]
+    }
+  },
+  "permissions": [
+    {"fileSystem": ["write", "retainEntries", "directory"]},
+    "storage",
+    "unlimitedStorage",
+    "audioCapture",
+    "videoCapture", /*, "alwaysOnTopWindows"*/
+    "identity",
+    "https://ssl.gstatic.com/",
+    "https://www.googleapis.com/",
+    "https://accounts.google.com/"
+  ]
+}

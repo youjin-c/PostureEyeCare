@@ -1,0 +1,98 @@
+html, body {
+	width: 120px;
+	height:250px;
+	margin-top: 3px;
+	/*width: 120px;
+	height:100px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 5px;*/
+	-webkit-app-region: drag;/*added*/
+}
+
+#intro {
+	position: relative;
+	top: 20px;
+    width: 120px; margin: 0 auto;
+    text-align: center;
+}
+
+#intro > #title{
+    font-size: 25px;
+    font-style: bold;
+}
+
+#intro > #summary{
+	position: relative;
+	top: 10px;
+    font-size: 15px;
+    font-style: bold;
+}
+
+#intro > #middle{
+	position: relative;
+	top: 30px;
+    font-size: 11px;
+    text-align: left;
+}
+
+#intro .item .icon {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+#intro .item .comment {
+	width: 340px;
+	height: 50px;
+	float: right;
+}
+
+#intro > #control{
+	position: relative;
+	top: 40px;
+}
+#min_close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: url('../images/min_close.png') no-repeat;
+	background-size: 15px 15px;
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	z-index: 100;
+}
+#expend_arrow {
+	float: left;
+	margin-top: 39px;
+	margin-left: -1px;
+	width: 15px; 
+	height: 15px;
+	position: absolute;
+	cursor: pointer;
+  	-webkit-app-region: no-drag;
+  	z-index: 100;
+}
+#posture_img{
+	width: 50px; 
+	height: 50px;
+	margin-left: 12px;
+	margin-right: 3px;
+}
+#eye_img{
+	width: 50px; 
+	height: 50px;
+	position : absolute;
+	z-index: 5;
+}
+#eye_canvas{
+	position:absolute;
+	z-index: 1;
+}
+
+
+
+
+

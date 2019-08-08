@@ -1,0 +1,31 @@
+#title_bar {
+	background-color: #444;
+	width: 660px;
+	height: 40px;
+	color: #fff;
+	font-size: 26px;
+	padding-left: 50px;
+	text-align: left;
+	-webkit-app-region: drag;
+}
+
+#intro {
+	width: 660px;
+	height: 410px;
+}
+
+#sidebar{
+	background-color: #888;
+	float: left;
+	width: 114px;
+	height: 410px;
+}
+
+#main-content{
+	background-color: #FFF;
+	float: right;
+	width: 546px;
+	height: 410px;
+}
+
+

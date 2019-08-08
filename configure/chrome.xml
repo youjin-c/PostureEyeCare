@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?> 
+<UnitComposer version="1.0.4"> 
+  <Header> 
+    <Startup target="DSM" pipeline="FALSE" /> 
+  </Header> 
+  <CompositionList> 
+    <Composition name="DSM" author="hh.yoon@lge.com" > 
+      <Unit name="LeftRawReader" class="CRawReaderUnit" priority="0"> 
+        <Property> 
+          <String  name="Source"    value="NULL" description="Data source"/> 
+          <Integer name="Columns (Width)" value="640" description="Columns of matrix"/> 
+          <Integer name="Rows (Height)"   value="480" description="Rows of matrix"/> 
+          <String  name="Primitive Type"  value="HX_GRAY8" description="Primitive type (tUInt8~64, tInt8~64, tFloat32~64, HX_ARGB32, HX_RGB24, HX_RGB565, HX_GRAY16, HX_GRAY8, HX_YUV422, HX_YUV420)"/> 
+          <Boolean name="Repeat"    value="FALSE" description="Repeat"/> 
+        </Property> 
+        <InputDataPin /> 
+        <OutputDataPin> 
+          <DataPin name="out" extern="left_direct_capture"/> 
+        </OutputDataPin> 
+      </Unit> 
+      <Unit name="LeftFD" class="CFDUnit" priority="0"> 
+      <Property>
+        <Integer name="Option"   value="0" description="SEQUENCE : 0 / STILLCUT_NORMAL : 1 / STILLCUT_SPEED : 2"/>
+        <Integer name="ProfileMode"   value="0" description="profile mode option (0: frontal, 1:profile)"/>
+      </Property>
+      <InputDataPin> 
+        <DataPin name="captured_image" from="LeftRawReader::out"/> 
+      </InputDataPin> 
+      <OutputDataPin> 
+        <DataPin name="face_detection_result" extern="LFD_result" /> 
+      </OutputDataPin> 
+      </Unit> 
+      <Unit name="LeftLD" class="CLDUnit" priority="0"> 
+        <Property> 
+          <Integer name="EyeTrackingMode"   value="2" description="Eye Tracking Mode"/>
+          <Integer name="Option"   value="0" description="Image mode(0 : sequence, 1 : still-cut)"/>
+        </Property> 
+        <InputDataPin> 
+          <DataPin name="captured_image" from="LeftRawReader::out"/> 
+          <DataPin name="face_detection_result" from="LeftFD::face_detection_result"/> 
+        </InputDataPin> 
+        <OutputDataPin> 
+          <DataPin name="landmark_detection_result" extern="LLD_result" /> 
+        </OutputDataPin> 
+      </Unit> 
+      <Unit name="LeftBD" class="CBDUnit" priority="0"> 
+        <Property> 
+          <Integer name="Input Mode" value="2" description= "0 : RGB / 1 : Infra-red Grey / 2 : Pattern mode" /> 
+          <Integer name="Threshold" value="30" description="blink detection threshold" />
+        </Property> 
+        <InputDataPin> 
+          <DataPin name="captured_image" from="LeftRawReader::out"/> 
+          <DataPin name="face_detection_result" from="LeftFD::face_detection_result"/> 
+          <DataPin name="landmark_detection_result" from="LeftLD::landmark_detection_result"/> 
+        </InputDataPin> 
+        <OutputDataPin> 
+          <DataPin name="blink_info" extern="LBD_result"/> 
+        </OutputDataPin> 
+      </Unit> 
+    </Composition> 
+  </CompositionList> 
+</UnitComposer>

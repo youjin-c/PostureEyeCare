@@ -1,0 +1,15 @@
+{
+	"file" :[
+		{
+			"name" : "chrome.xml" ,
+			"path" : "./configure" ,
+			"type" : "xml"
+		},
+		{
+			"name" : "Save_SDMTrain_NormAtan_Fr_LGIR_7p_multi_141022.txt" ,
+			"path" : "./data/landmark" ,
+			"type" : "data"
+		}
+	]
+}
+

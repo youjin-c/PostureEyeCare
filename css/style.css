@@ -1,0 +1,235 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+canvas{
+	width: 320px;
+	height: 240px;
+	transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+#intro {
+	position: relative;
+	top: 20px;
+    width: 390px; margin: 0 auto;
+    text-align: center;
+}
+
+#intro > #title{
+    font-size: 25px;
+    font-style: bold;
+}
+
+#intro > #summary{
+	position: relative;
+	top: 10px;
+    font-size: 15px;
+    font-style: bold;
+}
+
+#intro > #middle{
+	position: relative;
+	top: 30px;
+    font-size: 11px;
+    text-align: left;
+}
+
+#intro .item .icon {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+#intro .item .comment {
+	width: 340px;
+	height: 50px;
+	float: right;
+}
+
+#intro > #control{
+	position: relative;
+	top: 40px;
+}
+
+#icon_top {
+	background: url('../images/icon_main.png') no-repeat;
+	background-size: 30px 30px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 30px;
+	width: 30px;
+	z-index: 100;
+	-webkit-app-region: drag;
+}
+#close {
+	background: url('../images/icon_close.png') no-repeat;
+	background-size: 40px 40px;
+	position: absolute;
+	top:-5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	z-index: 100;
+}
+#minimize {
+	background: url('../images/icon_minimize.png') no-repeat;
+	background-size: 40px 40px;
+	position: absolute;
+	top:-5px;
+	right: 45px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	-webkit-app-region: no-drag;
+	z-index: 100;
+}
+#capture_posture {
+	float:left;
+	margin-left: 95px; /*auto*/
+	width:546px;
+	height: 410px;
+}
+
+#capture_posture_option_status {
+	float: none;
+	padding-top: 40px;
+	padding-left: 60px;
+	height: 100%;
+}
+
+#capture_posture_option_register {
+	float:right;
+	padding-left: 68px;
+	width:100px;
+	height: 100%;
+}
+
+#eye_capture {
+	float:left;
+	margin-left: 95px; /*auto*/
+	width:300px;
+	height: 410px;
+}
+
+#eye_capture_option {
+	float:left;
+	padding-top: 60px;
+	padding-left: 40px;
+	width:200px;
+	height: 410px;
+}
+input[type=checkbox] {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right : 30px;
+}
+#choose_dir {
+	position: absolute;
+	right: 30px;
+}
+#screen_mode, #auto_start, #data_save, #eye_capture, #eye_capture_option,
+#capture_posture, #capture_posture_option,
+#eye1, #eye2, #eye3 {
+	margin-top: 10px;
+}
+.page {
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+.hidden {
+	visibility: hidden;
+}
+hr {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	height:1px;
+}
+
+.progress .progress-bar.six-sec-ease-in-out {
+	-webkit-transition: width 6s
+	ease-in-out; -moz-transition: width 6s
+	ease-in-out; -ms-transition: width 6s
+	ease-in-out; -o-transition: width 6s
+	ease-in-out; transition: width 6s
+	ease-in-out;
+}
+
+.progress.vertical .progress-bar.six-sec-ease-in-out {
+	-webkit-transition: height 6s
+	ease-in-out; -moz-transition:
+	height 6s ease-in-out;
+	-ms-transition: height 6s
+	ease-in-out; -o-transition:
+	height 6s ease-in-out;
+	transition: height 6s
+	ease-in-out;
+}
+
+.progress.wide {
+	width: 30px;
+}
+
+.progress.vertical {
+	height: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+}
+.modal-dialog {
+	position: absolute;
+	padding-top: 70px;
+	padding-left: 150px;
+	width: 550px;
+}
+.wide_btn{
+	padding-left:160px;
+	padding-right:170px; 
+	padding-top:15.5px;
+	padding-bottom:15.5px;
+
+}
+#re_capture{
+	width : 100px;
+}
+#posture_cam{
+	/*position: absolute;*/
+}
+
+#result_cam{
+	position: absolute;
+	width: 160px;/*160px;*/
+	height: 120px;
+	margin-top: 5px;
+	margin-left: 30px;
+	border: 1px solid #CCC;
+}
+
+#example-list-fs ul {
+    padding-left: 0;
+    /*padding-top: 150px;*/
+}
+#example-list-fs li {
+    list-style: none;
+
+}
+#left_btn, #right_btn{
+	position: absolute;
+	margin-top: 55px;
+}
+#right_btn{
+	margin-left: 200px;
+}
+
+/*#IMG{
+	width: 160px;
+}*/

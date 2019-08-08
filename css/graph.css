@@ -1,0 +1,43 @@
+.graph-container {
+  width: 98%;
+  height: 200px;/*200*/
+  padding: 10px 0px 0px 10px;
+  margin: 0px auto 0px auto;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.graph-placeholder {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+.inbody-container{
+  width: 258px;
+  height: 75px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px auto 0px auto;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.inbody-placeholder{
+  margin-left: 400px;
+  width: 258px;
+  height: 75px;
+}
+.eyealarm-container{
+  width: 258px;
+  height: 75px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px auto 0px auto;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.eyealarmplaceholder{
+  width: 258px;
+  height: 75px;
+}
